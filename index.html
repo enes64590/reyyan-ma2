@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reyyanım ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#ffd7e2;
+    overflow-x:hidden;
+}
+
+/* GİRİŞ SAYFASI */
+
+#loginPage{
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url('giris.jpg');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.login-box{
+    width:90%;
+    max-width:420px;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    text-align:center;
+
+    color:white;
+}
+
+.login-box h1{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.login-box p{
+    margin-bottom:20px;
+    font-size:17px;
+}
+
+.login-box input{
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+    outline:none;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    margin-bottom:15px;
+}
+
+.login-box button{
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:white;
+
+    color:#ff4d88;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.login-box button:hover{
+    transform:scale(1.03);
+}
+
+#error{
+    margin-top:15px;
+    color:#ffe3e3;
+}
+
+/* ANA SAYFA */
+
+#mainSite{
+    display:none;
+}
+
+/* ÜST ALAN */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+    url('arkaplan.jpg');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content h1{
+    font-size:65px;
+    color:white;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:24px;
+    color:white;
+}
+
+/* GALERİ */
+
+.gallery{
+    width:92%;
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:80px 0;
+}
+
+.card{
+    margin-bottom:70px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background:white;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:550px;
+    object-fit:cover;
+}
+
+/* YAZI */
+
+.text-box{
+    padding:30px;
+}
+
+.love-text{
+    background:#fff0f5;
+
+    padding:22px;
+
+    border-radius:20px;
+
+    color:#444;
+
+    font-size:17px;
+
+    line-height:1.8;
+}
+
+/* MÜZİK BUTONU */
+
+.music-btn{
+    margin-top:20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+
+    background:#ff4d88;
+
+    color:white;
+
+    padding:16px;
+
+    border-radius:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.music-btn:hover{
+    transform:scale(1.03);
+}
+
+/* ALT YAZI */
+
+.footer{
+    text-align:center;
+
+    padding:50px 20px;
+
+    font-size:24px;
+
+    color:white;
+
+    background:#ff78a2;
+}
+
+/* MOBİL */
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:40px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+.card img{
+    height:320px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- GİRİŞ -->
+
+<div id="loginPage">
+
+    <div class="login-box">
+
+        <h1>❤️ Gizli Site ❤️</h1>
+
+        <p>Enesin senden en çok duymayı sevdiği kelime ?</p>
+
+        <input type="password" id="password" placeholder="Cevabı yaz...">
+
+        <button onclick="checkPassword()">Giriş Yap</button>
+
+        <div id="error"></div>
+
+    </div>
+
+</div>
+
+<!-- ANA SİTE -->
+
+<div id="mainSite">
+
+    <!-- ÜST ALAN -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Güzelimmm Seni Çok Seviyorum ❤️</h1>
+
+            <p>Bu sitedeki her şey senin için hazırladım...</p>
+
+        </div>
+
+    </section>
+
+    <!-- GALERİ -->
+
+    <section class="gallery">
+
+        <!-- FOTO 1 -->
+
+        <div class="card">
+
+            <img src="foto1.jpg">
+
+            <div class="text-box">
+
+                <div class="love-text">
+                    MANOLYA MANOLYA Hayat yaşamaya değer 
+                    Güneş yeniden doğar 
+                    Ve masum oluruz.
+                </div>
+
+                <div class="music-btn" onclick="playMusic('music1')">
+                    🤍 Dinle
+                </div>
+
+                <audio id="music1">
+                    <source src="sarki1.mp3" type="audio/mpeg">
+                </audio>
+
+            </div>
+
+        </div>
+
+        <!-- FOTO 2 -->
+
+        <div class="card">
+
+            <img src="foto2.jpg">
+
+            <div class="text-box">
+
+                <div class="love-text">
+                    Sen nereye gidersen git bende oraya gideceğim kimseye yarın vaat edilmedi Bu Yüzden Seni Her Gece Son Geceymiş Gibi Seveceğim eğer dünyanın sonu gelseydi senin yanında olmak isterdim
+                </div>
+
+                <div class="music-btn" onclick="playMusic('music2')">
+                    🤍 Dinle
+                </div>
+
+                <audio id="music2">
+                    <source src="sarki2.mp3" type="audio/mpeg">
+                </audio>
+
+            </div>
+
+        </div>
+
+        <!-- FOTO 3 -->
+
+        <div class="card">
+
+            <img src="foto3.jpg">
+
+            <div class="text-box">
+
+                <div class="love-text">
+                    Bir gönül davası anlatsam ağlarsıın :)
+                </div>
+
+                <div class="music-btn" onclick="playMusic('music3')">
+                    🤍 Dinle
+                </div>
+
+                <audio id="music3">
+                    <source src="sarki3.mp3" type="audio/mpeg">
+                </audio>
+
+            </div>
+
+        </div>
+
+        <!-- FOTO 4 -->
+
+        <div class="card">
+
+            <img src="foto4.jpg">
+
+            <div class="text-box">
+
+                <div class="love-text">
+                    MECBURUM SANA MECBURUMM ANLASANA ARTIIKKK 
+               </div>
+
+                <div class="music-btn" onclick="playMusic('music4')">
+                    🤍 Dinle
+                </div>
+
+                <audio id="music4">
+                    <source src="sarki4.mp3" type="audio/mpeg">
+                </audio>
+
+            </div>
+
+        </div>
+
+        <!-- FOTO 5 -->
+
+        <div class="card">
+
+            <img src="foto5.jpg">
+
+            <div class="text-box">
+
+                <div class="love-text">
+                    Kalbim senden senden vazgeçmeyecek Korkma içimde aşkın hiç bitmeyecek EĞER İSTERSEN SONSUZA DEK SÜRECEEK İnan bu adam hep seni seni seveceek...
+                </div>
+
+                <div class="music-btn" onclick="playMusic('music5')">
+                    🤍 Dinle
+                </div>
+
+                <audio id="music5">
+                    <source src="sarki5.mp3" type="audio/mpeg">
+                </audio>
+
+            </div>
+
+        </div>
+
+        <!-- FOTO 6 -->
+
+        <div class="card">
+
+            <img src="foto6.jpg">
+
+            <div class="text-box">
+
+                <div class="love-text">
+                    Artık GİZLEME benden seviyorsun sende benim gibi göster bak ben ezelden vurgun ah deliler gibi...
+                </div>
+
+                <div class="music-btn" onclick="playMusic('music6')">
+                    🤍 Dinle
+                </div>
+
+                <audio id="music6">
+                    <source src="sarki6.mp3" type="audio/mpeg">
+                </audio>
+
+            </div>
+
+        </div>
+
+        <!-- FOTO 7 -->
+
+        <div class="card">
+
+            <img src="foto7.jpg">
+
+            <div class="text-box">
+
+                <div class="love-text">
+                    Birde sen gidersen gitme nolur işte bir tek SEN bir tek SEN
+                </div>
+
+                <div class="music-btn" onclick="playMusic('music7')">
+                    🤍 Dinle
+                </div>
+
+                <audio id="music7">
+                    <source src="sarki7.mp3" type="audio/mpeg">
+                </audio>
+
+            </div>
+
+        </div>
+
+        <!-- FOTO 8 -->
+
+        <div class="card">
+
+            <img src="foto8.jpg">
+
+            <div class="text-box">
+
+                <div class="love-text">
+                    SEVİYORUMMM , SEVİYOR MUSUN?? Özlüyorum gidiyor musun...
+                </div>
+
+                <div class="music-btn" onclick="playMusic('music8')">
+                    🤍 Dinle
+                </div>
+
+                <audio id="music8">
+                    <source src="sarki8.mp3" type="audio/mpeg">
+                </audio>
+
+            </div>
+
+        </div>
+
+        <!-- FOTO 9 -->
+
+        <div class="card">
+
+            <img src="foto9.jpg">
+
+            <div class="text-box">
+
+                <div class="love-text">
+                    Senin kollarında başlayan sabahlara biten gecelere DOYAMAM İNŞALLAH ÖHÖM ÖHÖM
+                </div>
+
+                <div class="music-btn" onclick="playMusic('music9')">
+                    🤍 Dinle
+                </div>
+
+                <audio id="music9">
+                    <source src="sarki9.mp3" type="audio/mpeg">
+                </audio>
+
+            </div>
+
+        </div>
+
+        <!-- FOTO 10 -->
+
+        <div class="card">
+
+            <img src="foto10.jpg">
+
+            <div class="text-box">
+
+                <div class="love-text">
+                    Yorulursan yaslan bana sarılıp uyuyalım gün batımında belki üstümüzden bir kuş geçer kanadından bir tüy düşer iner döne döne gökyüzünden HİÇ BİR YÜZ GÜZEL DEĞİL SENİN YÜZÜNDEN
+                </div>
+
+                <div class="music-btn" onclick="playMusic('music10')">
+                    🤍 Dinle
+                </div>
+
+                <audio id="music10">
+                    <source src="sarki10.mp3" type="audio/mpeg">
+                </audio>
+
+            </div>
+
+        </div>
+
+        <!-- FOTO 11 -->
+
+        <div class="card">
+
+            <img src="foto11.jpg">
+
+            <div class="text-box">
+
+                <div class="love-text">
+                    Ne olursun HAYDİ GEL BENİMLE OOOL...
+                </div>
+
+                <div class="music-btn" onclick="playMusic('music11')">
+                    🤍 Dinle
+                </div>
+
+                <audio id="music11">
+                    <source src="sarki11.mp3" type="audio/mpeg">
+                </audio>
+
+            </div>
+
+        </div>
+
+        <!-- FOTO 12 -->
+
+        <div class="card">
+
+            <img src="foto12.jpg">
+
+            <div class="text-box">
+
+                <div class="love-text">
+                    Nasıl birisin beni böyle üzebelirsin sanki herşeyi denedin kalabilirsin peki hala gidebilirsin daha değersiz hissettiremezdin Çünkü ben ne zaman birşey istesem bana verilen koca bir saçmalık ;)
+                </div>
+
+                <div class="music-btn" onclick="playMusic('music12')">
+                    🤍 Dinle
+                </div>
+
+                <audio id="music12">
+                    <source src="sarki12.mp3" type="audio/mpeg">
+                </audio>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="footer">
+        Ömrümün sonuna kadar benim ol istiyorumm ❤️
+    </div>
+
+</div>
+
+<script>
+
+/* ŞİFRE */
+
+function checkPassword(){
+
+    let password = document.getElementById("password").value.toLowerCase();
+
+    if(password === "bitanem"){
+
+        document.getElementById("loginPage").style.display = "none";
+
+        document.getElementById("mainSite").style.display = "block";
+
+    }
+
+    else{
+
+        document.getElementById("error").innerHTML = "Yanlış cevap ❤️";
+
+    }
+
+}
+
+/* MÜZİK */
+
+function playMusic(id){
+
+    let currentMusic = document.getElementById(id);
+
+    let allMusic = document.querySelectorAll("audio");
+
+    allMusic.forEach(song => {
+
+        if(song !== currentMusic){
+
+            song.pause();
+
+            song.currentTime = 0;
+
+        }
+
+    });
+
+    if(currentMusic.paused){
+
+        currentMusic.play();
+
+    }
+
+    else{
+
+        currentMusic.pause();
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
